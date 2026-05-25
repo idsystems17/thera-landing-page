@@ -231,6 +231,68 @@ h1, h2, h3 {
 }
 
 
+/* Hero badge */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+/* --- Trust Seals --- */
+.trust-seals {
+    padding: 20px 0 60px;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 28px;
+}
+
+.trust-icon {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    background: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+.trust-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.trust-text strong {
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.trust-text span {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
 /* --- Features --- */
 .features {
     padding: 100px 0;
@@ -281,6 +343,93 @@ h1, h2, h3 {
     font-weight: 500;
     max-width: 800px;
     margin: 0 auto;
+}
+
+/* --- Features Showcase --- */
+.showcase {
+    padding: 80px 0 100px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    margin-top: -2rem;
+    margin-bottom: 4rem;
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+.showcase-row {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-bottom: 100px;
+}
+
+.showcase-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.showcase-row:last-child {
+    margin-bottom: 0;
+}
+
+.showcase-content {
+    flex: 1;
+}
+
+.showcase-label {
+    display: inline-block;
+    background: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-bottom: 16px;
+}
+
+.showcase-content h3 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    line-height: 1.25;
+    color: var(--color-text);
+}
+
+.showcase-content p {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    line-height: 1.75;
+}
+
+.showcase-image-wrap {
+    flex: 1;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+.showcase-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.phone-wrap {
+    flex: 0 0 auto;
+    width: 280px;
+    border-radius: 36px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.12);
+}
+
+.phone-img {
+    border-radius: 36px;
 }
 
 /* --- Testimonials --- */
@@ -453,8 +602,44 @@ h1, h2, h3 {
     border-radius: 8px;
 }
 
+.guarantee-badge {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(56, 161, 105, 0.07);
+    border: 1px solid rgba(56, 161, 105, 0.25);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    margin-top: 28px;
+    text-align: left;
+}
+
+.guarantee-icon {
+    flex-shrink: 0;
+    font-size: 40px;
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.guarantee-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.guarantee-text strong {
+    font-size: 1rem;
+    color: var(--color-text);
+}
+
+.guarantee-text span {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
 .guarantee {
-    margin-top: 24px;
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -630,15 +815,31 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .hero h1 {
         font-size: 2.8rem;
     }
-    
+
     .hero-image {
         width: 100%;
         max-width: 600px;
         transform: none;
+    }
+
+    .showcase-row,
+    .showcase-row.reverse {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+
+    .showcase-content {
+        text-align: center;
+    }
+
+    .phone-wrap {
+        width: 240px;
+        margin: 0 auto;
     }
 }
 
