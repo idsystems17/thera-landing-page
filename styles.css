@@ -134,6 +134,25 @@ h1, h2, h3 {
     100% { transform: scale(1); }
 }
 
+.btn-outline {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary);
+    color: white;
+    transform: translateY(-1px);
+}
+
 .pulse {
     animation: pulse 2s infinite;
 }
